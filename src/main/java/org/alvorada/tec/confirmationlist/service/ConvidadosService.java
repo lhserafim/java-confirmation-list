@@ -18,4 +18,8 @@ public class ConvidadosService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Convidado não encontrado."));
     }
 
+    public Convidados salvarConvidado(Convidados convidados) {
+        return convidadosRepository.save(convidados);
+    }
+
 }
